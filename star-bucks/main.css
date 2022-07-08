@@ -5,19 +5,66 @@ body{
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
- 
+  height: 20000px;
 }
-/* .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-} */
+
 .inner{
   position: relative;
   width: 1100px;
   margin: 0 auto;
+}
+.strong{
+  font-weight: 800;
+}
+a{
+  text-decoration: none;
+}
+.btn{
+  display: inline-block;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  /* currentcolor 부모가 가진 컬러를 상속받았다. */
+  border: 2px solid currentColor;
+  border-radius: 5px;
+}
+.btn--reverse{
+  background-color: #00704a;
+  border-color: #00704a;
+  color: white;
+}
+.btn--reverse:hover{
+  text-decoration: underline;
+}
+.btn--white{
+  border-color: white;
+  color: white;  
+}
+.btn--white:hover{
+  text-decoration: underline;
+}
+.btn--light_green{
+  border-color: #00704a;
+  color: #00704a;
+  transition: 0.4s;
+}
+.btn--dark_green{
+  background-color: #1c3831;
+  color: white;
+  text-decoration: underline;
+}
+.btn--light_green:hover{
+  color: white;
+  background-color: #00704a;
+  text-decoration: underline;
+}
+.btn--gold{
+  color: white;
+  transition: 0.4s;
+}
+.btn--gold:hover{
+  background-color: brown;
+  color: gold;
+  text-decoration: underline;
 
 }
 /* header */
@@ -244,19 +291,12 @@ header .badges .badge>a>img{
 }
 .visual .inner .slogan>.btn{
   display: block;
-  border: 2px solid #1c8381;
   color: black;
-  width: 120px;
+  width: 140px;
   height: 38px;
   margin-top: 20px;
   position: absolute;
-  font-size: 15px;
-  line-height: 38px;
-  border-radius: 5px;
-  text-align: center;
-  box-sizing: border-box;
   transition: 0.4s;
-  color: #1c8381;
   opacity: 0;
   text-decoration: none;
 }
@@ -313,3 +353,405 @@ header .badges .badge>a>img{
   opacity: 1;
   transition-delay: 1.6s;
 }
+
+/* notice */
+.notice{
+}
+.notice .notice_line{
+  position: relative;
+}
+
+
+.notice .notice_line .bg_left{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  background-color: #111111;;
+
+}
+.notice .notice_line .bg_right{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  right: 0;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+.notice .notice_line .inner{
+  height: 62px;
+  display: flex;
+}
+.notice .notice_line .inner .inner__left{
+ position: relative;
+ width: 60%;
+ height: 100%;
+ background-color: #111111;
+ display: flex;
+ align-items: center;
+ color: white;
+}
+.notice .notice_line .inner .inner__left h1{
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+
+}
+
+.notice .notice_line .inner .inner__left .swiper_container{
+  position: absolute;
+  left: 80px;
+  flex-grow: 1;
+  font-size: 14px;
+
+}
+.notice .notice_line .inner__left a{
+  position: absolute;
+  right: 20px;
+  color: white;
+
+}
+.notice .notice_line .inner__left a span{
+ font-size: 36px;
+ /* span 태그일때 수직 중앙정렬을 할떄 사용 */
+ vertical-align: bottom; 
+
+}
+.notice .notice_line .inner__right{
+  position: relative;
+  width: 40%;
+  height: 100%;
+  background-color: #f6f5ef;
+  display: flex;
+  align-items: center;
+  color: #111111;
+} 
+.notice .notice_line .inner .inner__right h1{
+  font-weight: bold;
+  position: absolute;
+  right: 180px;
+} 
+.notice .notice_line .inner .inner__right a{
+  position: absolute;
+  right: 120px;
+  color: #111111;
+  /* flex-grow: 1; */
+
+
+} 
+.notice .notice_line .inner .inner__right a span{
+  font-size: 36px;
+  /* span 태그일때 수직 중앙정렬을 할떄 사용 */
+  vertical-align: bottom; 
+} 
+/* rewards */
+.rewards{
+  background-color: #1e3932;
+}
+ 
+.rewards .inner{
+   padding: 30px 0 40px 0;
+   display: flex;
+   /* display: flex일떄 사용 가능한 속성 */
+   gap: 20px;
+}
+
+.rewards .inner>a {
+
+}
+
+.rewards .inner>a>img {
+  display: block;
+  width: 176px;
+}
+.rewards .inner .rewards__items{
+  /* inner 남는 공간만큼 차지하게 하기 위한 특성 */
+   flex-grow: 1;
+}
+.rewards .inner .rewards__items .rewards__items__register{
+  position: relative;
+  padding: 0 0 12px 0;
+  /* border-bottom: 1px solid #c8c8c8; */
+  /* border-bottom의 한계보다 더 얇게 줄여주고 싶을 떄 */
+  box-shadow: 0 0.5px #c8c8c8;
+
+}
+
+.rewards .inner .rewards__items .rewards__items__register p{
+  /* 마진 패딩값을 원할하게 조절하기 위한 속성 */
+  display: block;
+  font-size: 17px;
+  color: white;
+
+}
+
+.rewards .inner .rewards__items .rewards__items__register p.subject{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.rewards .inner .rewards__items .rewards__items__register .buttons{
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+}
+
+.rewards .inner .rewards__items .rewards__items__card{
+  position: relative;
+  padding-top: 20px;
+
+}
+
+.rewards .inner .rewards__items .rewards__items__card p{
+  font-size: 14px;
+  color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__card .buttons{
+  position: absolute;
+  right: -20px;
+  padding: 20px;
+  top: 0;
+  
+}
+/* peru */
+.peru{
+ position: relative;
+ background-image: url("./images/peru_bg.jpg");
+ height: 570px;
+ overflow: hidden;
+}
+.peru::before{
+  content: "";
+  background-image: url("./images/peru_bg_left.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+.peru::after{
+  content: "";
+  background-image: url("./images/peru_bg_right.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+.peru .inner{
+  /* height: 500px;
+  background-color: orange; */
+
+}
+.peru .inner .img_product{
+  display: block;
+  position: absolute;
+  width: 300px;
+  top: 120px;
+  left: 180px;
+  transform: translate(-450px, 0);
+  transition: 2.5s;
+  opacity: 0;
+}
+.peru .inner:active .img_product{
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+.peru .inner .peru__contents{
+  position: absolute;
+  top: 160px;
+  right: 0px;
+  transform: translate(450px, 0);
+  transition: 2.5s;
+  opacity: 0;
+}
+.peru .inner:active .peru__contents{
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+.peru .inner .peru__contents>img{
+  /* width: 427px; */
+
+}
+.peru .inner .peru__contents .btn{
+  display: block;
+  margin-top: 20px;
+  width: 145px;
+  height: 38px;
+  text-align: center;
+
+}
+/* indonesia */
+.indonesia{
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background-image: url("./images/indonesia_bg.jpg");
+}
+.indonesia::before{
+  content: "";
+  background-image: url("./images/indonesia_bg_left.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 373px;
+  height: 277px;
+  left: -140px;
+}
+.indonesia::after{
+  content: "";
+  background-image: url("./images/indonesia_bg_right.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 563px;
+  height: 280px;
+  right: -460px;
+}
+.indonesia .inner{
+
+}
+.indonesia .inner .indonesia__img{
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: -200px;
+}
+.indonesia .inner .indonesia__title{
+  display: block;
+  position: absolute;
+  width: 500px;
+  left: 20px;
+  height: 115px;
+  top: 100px;
+}
+.indonesia .inner .btn.btn--gold{
+  display: block;
+  position: absolute;
+  margin-top: 240px;
+  width: 145px;
+  height: 38px;
+  left: 250px;
+  text-align: center;
+  color: gold;
+}
+.favorite{
+  background-image: url("./images/fav_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  height: 1200px;
+  overflow: hidden;
+  /* display: block; */
+}
+.favorite .inner{
+  height: 1200px;
+
+}
+.favorite .inner .fav__title_1{
+  position: absolute;
+  width: 258px;
+  top: 60px;
+  left: 150px;
+  transform: translate(-600px, 0);
+  transition: 2.5s;
+  opacity: 0;
+}
+.favorite .inner:hover .fav__title_1{
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+.favorite .inner .fav__title_2{
+  position: absolute;
+  width: 362px;
+  top: 280px;
+  left: 40px;
+  transform: translate(-600px, 0px);
+  transition: 2.7s;
+  opacity: 0;
+}
+.favorite .inner:hover .fav__title_2{
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.favorite .inner .fav__image{
+  position: absolute;
+  right:-120px;
+  top: 120px;
+
+}
+.favorite .inner .btn{
+  position: absolute;
+  left: 260px;
+  top: 460px;
+  color: white;
+  opacity: 0;
+}
+.favorite .inner:hover .btn{
+  opacity: 1;
+}
+.magazine{
+  position: relative;
+  background-image: url("./images/magazine_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+}
+.magazine .inner{
+
+}
+.magazine .inner .magazine_title{
+  position: absolute;
+  left: 15px;
+  height: 97px;
+  width: 588px;
+  top: 160px;
+}
+.magazine .inner .magazine_img{
+  position: absolute;
+  right: 15px;
+  height: 374px;
+  width: 348px;
+  top: 0px;
+}
+.magazine .inner .btn{
+  position: absolute; 
+  top: 280px;
+  width: 140px;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  left: 300px;
+
+}
+.magazine .inner .btn:hover{
+  background-color: black;
+  text-decoration: underline;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+
+
